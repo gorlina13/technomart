@@ -17,7 +17,7 @@
       <symbol id="icon-logout" viewBox="0 0 21 17">
         <path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
       </symbol>
-      <symbol id="icon-user" viewBox="0 0 20 18">
+      <symbol id="icon-username" viewBox="0 0 20 18">
         <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
       </symbol>
       <symbol id="checkbox-off" viewBox="0 0 23 23">
@@ -32,10 +32,13 @@
         <div class="page-header__wrapper wrapper">
           <a class="page-header__logo logo logo--header">Техномарт</a>
           <form class="page-header__search search" action="#" method="post" role="search">
-            <input class="search__input" type="search" name="search" id="search-field" placeholder="Поиск">
+            <input class="search__input" type="search" name="search" id="search-field" placeholder="Поиск:">
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <button class="search__submit" type="submit">
               <span class="visually-hidden">Искать</span>
+              <svg class="search__icon" width="17" height="17" aria-hidden="true" role="presentation">
+                <use xlink:href="#icon-search"></use>
+              </svg>
             </button>
           </form>
           <a class="page-header__link page-header__link--bookmark" href="#">Закладки: 0</a>
@@ -46,12 +49,17 @@
       <div class="page-header__wrapper wrapper">
         <p class="page-header__description">Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов&nbsp;для&nbsp;ремонта</p>
         <p class="page-header__contacts">
-          <a class="page-header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8
+          <b class="page-header__phone">+7&nbsp;(812)&nbsp;555-05-55</b>
+          <span class="page-header__address">г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8</span>
         </p>
         <ul class="page-header__user-list user-list user-list--unknown">
           <li class="user-list__item user-list__item--login">
-            <a class="user-list__link user-list__link--login" href="#">Войти</a>
+            <a class="user-list__link user-list__link--login" href="#">
+              <span class="user-list__text">Войти</span>
+              <svg class="user-list__icon user-list__icon--login" width="20" height="17" aria-hidden="true" role="presentation">
+                <use xlink:href="#icon-login"></use>
+              </svg>
+            </a>
           </li>
           <li class="user-list__item user-list__item--signup">
             <a class="user-list__link user-list__link--signup" href="#">Регистрация</a>
