@@ -95,7 +95,7 @@
 
     <main class="main">
       <h1 class="visually-hidden">Магазин «Техномарт»</h1>
-      <div class="main__wrapper wrapper">
+      <div class="wrapper">
         <section class="offers">
           <h2 class="visually-hidden">Наши предложения</h2>
           <ul class="offers__list offers__list--goods">
@@ -324,7 +324,7 @@
         </div>
       </section>
 
-      <div class="main__wrapper wrapper">
+      <div class="wrapper wrapper--flex">
         <section class="company" id="company">
           <h2 class="company__title">Компания &laquo;Техномарт&raquo;</h2>
           <p class="company__info">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -340,8 +340,13 @@
         <section class="contacts" id="contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__info">Вы можете забрать товар сами,<br>заехав в наш офис:</p>
-          <a class="contacts__map-preview" href="#">
-            <img class="contacts__map-image" src="img/map-preview.jpg" width="300" height="158" alt="Местоположение на карте: Большая Конюшенная ул., 19/8">
+          <a class="contacts__map map" href="#">
+            <div class="map__container">
+              <p class="map__illustration map__illustration--preview">
+                <img class="map__image map__image--preview" src="img/map-preview.jpg" width="300" height="158" alt="Местоположение на карте: Большая Конюшенная ул., 19/8">
+              </p>
+              <p class="map__interactive-area map__interactive-area--preview"></p>
+            </div>
           </a>
           <a class="contacts__button button button--contacts" href="#">Заблудились? Напишите нам</a>
         </section>
@@ -369,7 +374,7 @@
           </li>
         </ul>
         <p class="page-footer__contacts">
-          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8<br>
+          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8
           <b class="page-footer__phone">+7&nbsp;(812)&nbsp;555-05-55</b>
         </p>
         <ul class="page-footer__list page-footer__list--categories">
@@ -409,16 +414,14 @@
             </a>
           </li>
         </ul>
-        <dl class="page-footer__copyright copyright copyright--htmlacademy">
-          <dt class="copyright__term">Обратная связь:</dt>
-          <dd>
-            <a class="copyright__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </dd>
-          <dt class="copyright__term">Разработано:</dt>
-          <dd>
-            <a class="copyright__link" href="https://htmlacademy.ru">htmlacademy.ru</a>
-          </dd>
-        </dl>
+        <p class="page-footer__copyright copyright copyright--htmlacademy">
+          Обратная связь:
+          <a class="copyright__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="page-footer__copyright copyright copyright--htmlacademy">
+          Разработано &ndash;
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </p>
       </div>
     </footer>
 
