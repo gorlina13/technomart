@@ -343,7 +343,7 @@
           <a class="contacts__map map" href="#">
             <div class="map__container">
               <p class="map__illustration map__illustration--preview">
-                <img class="map__image map__image--preview" src="img/map-preview.jpg" width="300" height="158" alt="Местоположение на карте: Большая Конюшенная ул., 19/8">
+                <img class="map__image map__image--preview" src="img/map-preview.jpg" width="300" height="158" alt="Местоположение на карте: Большая Конюшенная ул., 19">
               </p>
               <p class="map__interactive-area map__interactive-area--preview"></p>
             </div>
@@ -374,8 +374,8 @@
           </li>
         </ul>
         <p class="page-footer__contacts">
-          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8
-          <b class="page-footer__phone">+7&nbsp;(812)&nbsp;555-05-55</b>
+          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8<br>
+          +7&nbsp;(812)&nbsp;555-05-55
         </p>
         <ul class="page-footer__list page-footer__list--categories">
           <li class="page-footer__item">
@@ -425,9 +425,16 @@
       </div>
     </footer>
 
-    <section class="modal modal--map map">
-      <h2 class="visually-hidden">Карта проезда к офису: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</h2>
-      <div class="map__area"></div>
+    <section class="modal modal--map">
+      <h2 class="visually-hidden">Карта проезда к офису: Санкт-Петербург, ул. Большая Конюшенная, д. 19</h2>
+      <div class="modal__map map">
+        <div class="map__container">
+          <p class="map__illustration map__illustration--big">
+            <img class="map__image map__image--big" src="img/map-big.jpg" width="940" height="446" alt="Большая Конюшенная ул., 19">
+          </p>
+          <p class="map__interactive-area map__interactive-area--big"></p>
+        </div>
+      </div>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть окно</span>
       </button>
@@ -456,5 +463,8 @@
         <span class="visually-hidden">Закрыть окно</span>
       </button>
     </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPChudeBDq6E5cWVAiQcCxzzbQm4o-93c&callback=initMap" async defer></script>
   </body>
 </html>
