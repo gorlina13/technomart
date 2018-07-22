@@ -121,19 +121,180 @@ label.visually-hidden {
   padding: 0 10px;
 }
 
-.main {
-  width: auto;
+.button {
+  display: block;
+  padding: 7px;
+
+  font: normal 400 14px/18px "Cuprum", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: #ee3643;
+  border: 3px solid transparent;
+  border-radius: 3px;
 }
 
-.main__wrapper--flex {
-  display: flex;
-  flex-wrap: wrap;
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
 }
 
-.main__inner {
-  flex-shrink: 0;
+.button:active {
+  background-color: #ba2732;
+}
 
-  width: 700px;
+.button--offers {
+  width: 135px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button--offers:hover,
+.button--offers:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button--offers:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button--favorites {
+  width: 195px;
+  padding-left: 10px;
+}
+
+.button--popular {
+  width: 253px;
+}
+
+.button--buy {
+  position: relative;
+
+  width: 135px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+
+  background-color: #63a63e;
+  border-bottom-color: #367315;
+}
+
+.button--buy::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 40px;
+  height: 100%;
+
+  background-image: url("../img/icon-cart.svg");
+  background-position: 11px 49%;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.button--buy:hover::before,
+.button--buy:focus::before {
+  opacity: 1;
+}
+
+.button--buy:hover,
+.button--buy:focus {
+  background-color: #5fbb2d;
+}
+
+.button--buy:active {
+  background-color: #518534;
+  border-bottom-color: transparent;
+}
+
+.button--bookmark {
+  width: 135px;
+  margin: 0 auto;
+
+  color: #32425c;
+
+  background-color: #ffffff;
+  border-color: #63a63e;
+}
+
+.button--bookmark:hover,
+.button--bookmark:focus {
+  background-color: #ffffff;
+  border-color: #32425c;
+}
+
+.button--bookmark:active {
+  opacity: 0.3;
+}
+
+.button--credit {
+  width: 195px;
+
+  background-color: #ff5357;
+}
+
+.button--company {
+  width: 220px;
+}
+
+.button--contacts {
+  width: 300px;
+}
+
+.button--message-form {
+  width: 460px;
+  margin: 0 auto;
+  margin-bottom: 37px;
+}
+
+.button--filter-form {
+  width: 140px;
+  padding: 10px 9px 8px;
+
+  font: normal 400 13px/18px "PT Sans", "Arial", sans-serif;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.button--filter-form:hover,
+.button--filter-form:focus {
+  background-color: #ffffff;
+  border-color: #bdc6ca;
+}
+
+.button--filter-form:active {
+  border-color: #ee3643;
+}
+
+.button--checkout,
+.button--continue {
+  display: inline-block;
+  width: 220px;
+  vertical-align: top;
+}
+
+.button--checkout {
+  margin-right: 20px;
+}
+
+.button--continue {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.button--continue:hover,
+.button--continue:focus,
+.button--continue:active {
+  color: #ffffff;
 }
 
 .page-header {
@@ -689,6 +850,21 @@ label.visually-hidden {
   background-color: #1d2739;
 }
 
+.main {
+  width: auto;
+}
+
+.main__wrapper--flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__inner {
+  flex-shrink: 0;
+
+  width: 700px;
+}
+
 .offers {
   display: flex;
   flex-wrap: wrap;
@@ -1160,13 +1336,10 @@ label.visually-hidden {
   background-repeat: no-repeat;
 }
 
-.product__actions:active,
-.product:hover .product__actions,
-.product:focus .product__actions {
+.product__actions {
   position: absolute;
   z-index: 10;
 
-  display: block;
   top: 0;
   left: 0;
   right: 0;
@@ -1175,14 +1348,100 @@ label.visually-hidden {
   height: auto;
   min-height: 154px;
   margin: 0;
-  padding-top: 44px;
+  padding-top: 43px;
+
+  background-color: #ffffff;
+}
+
+.product:not(:hover):not(:focus) .product__button:not(:focus) {
+  position: absolute;
+
+  top: auto;
+  left: auto;
+  right: auto;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border-width: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.product:not(:hover):not(:focus) .product__actions {
+  background-color: transparent;
+}
+
+.product__button:nth-child(2):focus {
+  position: absolute;
+
+  top: 90px;
+  left: -41.5px;
+  right: -41.5px;
+}
+
+.product:not(:hover) .product__button:first-child:focus {
+  box-shadow: 0 0 0 41px #ffffff,
+              0 46px 0 28px #ffffff;
+}
+
+.product:not(:hover) .product__button:nth-child(2):focus {
+  box-shadow: 0 -46px 0 41px #ffffff,
+              0 0 0 28px #ffffff;
+}
+
+/* Третья степень вложенности селекторов -
+чтобы переопределить правила, которые заданы для браузеров без поддержки :focus-within.
+Пока не пришла к более лаконичному решению. */
+.product:not(:hover):focus-within .product__actions:focus-within .product__button:not(:focus) {
+  position: relative;
+
+  top: auto;
+  left: auto;
+  right: auto;
+
+  width: 135px;
+  height: auto;
+  margin: 0 auto;
+  padding: 7px;
+
+  border-width: 3px;
 
   white-space: normal;
 
-  background-color: #ffffff;
   clip-path: none;
   clip: auto;
   overflow: visible;
+}
+
+.product:not(:hover):focus-within .product__actions:focus-within .product__button:first-child:not(:focus) {
+  margin-bottom: 8px;
+}
+
+.product:not(:hover):focus-within .product__actions:focus-within {
+  background-color: #ffffff;
+}
+
+.product:focus-within .product__button:nth-child(2):focus {
+  position: static;
+}
+
+.product:not(:hover):focus-within .product__button:first-child:focus {
+  box-shadow: none;
+}
+
+.product:not(:hover):focus-within .product__button:nth-child(2):focus {
+  box-shadow: none;
+}
+
+.product:focus-within .product__sticker--new {
+  visibility: hidden;
 }
 
 .product:hover .product__sticker--new,
@@ -1194,6 +1453,10 @@ label.visually-hidden {
 .product:focus {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
   outline: none;
+}
+
+.product:focus-within {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .product__illustration {
@@ -1841,182 +2104,6 @@ label.visually-hidden {
 
   background-image: url("../img/icon-insta.svg");
   background-size: 21px 21px;
-}
-
-.button {
-  display: block;
-  padding: 7px;
-
-  font: normal 400 14px/18px "Cuprum", "Arial", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-
-  background-color: #ee3643;
-  border: 3px solid transparent;
-  border-radius: 3px;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #ca2c37;
-}
-
-.button:active {
-  background-color: #ba2732;
-}
-
-.button--offers {
-  width: 135px;
-
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.button--offers:hover,
-.button--offers:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.button--offers:active {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.button--favorites {
-  width: 195px;
-  padding-left: 10px;
-}
-
-.button--popular {
-  width: 253px;
-}
-
-.button--buy {
-  position: relative;
-
-  width: 135px;
-  margin: 0 auto;
-  margin-bottom: 9px;
-
-  background-color: #63a63e;
-  border-bottom-color: #367315;
-}
-
-.button--buy::before {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  width: 40px;
-  height: 100%;
-
-  background-image: url("../img/icon-cart.svg");
-  background-position: 11px 49%;
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  opacity: 0.3;
-}
-
-.button--buy:hover::before,
-.button--buy:focus::before {
-  opacity: 1;
-}
-
-.button--buy:hover,
-.button--buy:focus {
-  background-color: #5fbb2d;
-}
-
-.button--buy:active {
-  background-color: #518534;
-  border-bottom-color: transparent;
-}
-
-.button--bookmark {
-  width: 135px;
-  margin: 0 auto;
-
-  color: #32425c;
-
-  background-color: #ffffff;
-  border-color: #63a63e;
-}
-
-.button--bookmark:hover,
-.button--bookmark:focus {
-  background-color: #ffffff;
-  border-color: #32425c;
-}
-
-.button--bookmark:active {
-  opacity: 0.3;
-}
-
-.button--credit {
-  width: 195px;
-
-  background-color: #ff5357;
-}
-
-.button--company {
-  width: 220px;
-}
-
-.button--contacts {
-  width: 300px;
-}
-
-.button--message-form {
-  width: 460px;
-  margin: 0 auto;
-  margin-bottom: 37px;
-}
-
-.button--filter-form {
-  width: 140px;
-  padding: 10px 9px 8px;
-
-  font: normal 400 13px/18px "PT Sans", "Arial", sans-serif;
-  color: #000000;
-
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-}
-
-.button--filter-form:hover,
-.button--filter-form:focus {
-  background-color: #ffffff;
-  border-color: #bdc6ca;
-}
-
-.button--filter-form:active {
-  border-color: #ee3643;
-}
-
-.button--checkout,
-.button--continue {
-  display: inline-block;
-  width: 220px;
-  vertical-align: top;
-}
-
-.button--checkout {
-  margin-right: 20px;
-}
-
-.button--continue {
-  color: #000000;
-
-  background-color: #ffffff;
-}
-
-.button--continue:hover,
-.button--continue:focus,
-.button--continue:active {
-  color: #ffffff;
 }
 
 .modal {
