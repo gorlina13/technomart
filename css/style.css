@@ -1321,6 +1321,7 @@ label.visually-hidden {
 
 .product__sticker--new {
   position: absolute;
+  z-index: 10;
   top: -1px;
   right: -1px;
 
@@ -1338,7 +1339,7 @@ label.visually-hidden {
 
 .product__actions {
   position: absolute;
-  z-index: 10;
+  z-index: 5;
 
   top: 0;
   left: 0;
@@ -1353,7 +1354,7 @@ label.visually-hidden {
   background-color: #ffffff;
 }
 
-.product:not(:hover):not(:focus) .product__button:not(:focus) {
+.product:not(:hover) .product__button:not(:focus) {
   position: absolute;
 
   top: auto;
@@ -1374,32 +1375,25 @@ label.visually-hidden {
   overflow: hidden;
 }
 
-.product:not(:hover):not(:focus) .product__actions {
+.product:not(:hover) .product__actions {
   background-color: transparent;
 }
 
-.product__button:nth-child(2):focus {
-  position: absolute;
-
-  top: 90px;
-  left: -41.5px;
-  right: -41.5px;
+.product:not(:hover) .product__button:nth-child(2):focus {
+  transform: translateY(46px);
 }
 
 .product:not(:hover) .product__button:first-child:focus {
   box-shadow: 0 0 0 41px #ffffff,
-              0 46px 0 28px #ffffff;
+              0 33px 0 41px #ffffff;
 }
 
 .product:not(:hover) .product__button:nth-child(2):focus {
   box-shadow: 0 -46px 0 41px #ffffff,
-              0 0 0 28px #ffffff;
+              0 -13px 0 41px #ffffff;
 }
 
-/* Третья степень вложенности селекторов -
-чтобы переопределить правила, которые заданы для браузеров без поддержки :focus-within.
-Пока не пришла к более лаконичному решению. */
-.product:not(:hover):focus-within .product__actions:focus-within .product__button:not(:focus) {
+.product:not(:hover):focus-within .product__button:not(:focus) {
   position: relative;
 
   top: auto;
@@ -1420,16 +1414,16 @@ label.visually-hidden {
   overflow: visible;
 }
 
-.product:not(:hover):focus-within .product__actions:focus-within .product__button:first-child:not(:focus) {
+.product:not(:hover):focus-within .product__button:first-child:not(:focus) {
   margin-bottom: 8px;
 }
 
-.product:not(:hover):focus-within .product__actions:focus-within {
+.product:not(:hover):focus-within .product__actions {
   background-color: #ffffff;
 }
 
-.product:focus-within .product__button:nth-child(2):focus {
-  position: static;
+.product:not(:hover):focus-within .product__button:nth-child(2):focus {
+  transform: none;
 }
 
 .product:not(:hover):focus-within .product__button:first-child:focus {
@@ -1438,15 +1432,6 @@ label.visually-hidden {
 
 .product:not(:hover):focus-within .product__button:nth-child(2):focus {
   box-shadow: none;
-}
-
-.product:focus-within .product__sticker--new {
-  visibility: hidden;
-}
-
-.product:hover .product__sticker--new,
-.product:focus .product__sticker--new {
-  visibility: hidden;
 }
 
 .product:hover,
