@@ -8,10 +8,6 @@ var toCartButtons = document.querySelectorAll('.button--buy');
 var cartPlusModal = document.querySelector('.modal--cart-plus');
 var modals = document.querySelectorAll('.modal');
 var overlay = document.querySelector('.overlay');
-var messageForm = messageModal.querySelector('.message-form');
-var username = messageModal.querySelector('[name=username]');
-var email = messageModal.querySelector('[name=email]');
-var storage = localStorage.getItem('username');
 
 function showModal(event, modal) {
   event.preventDefault();
@@ -36,6 +32,11 @@ if ((mapLink) && (mapModal)) {
 }
 
 if ((messageButton) && (messageModal)) {
+  var messageForm = messageModal.querySelector('.message-form');
+  var username = messageModal.querySelector('[name=username]');
+  var email = messageModal.querySelector('[name=email]');
+  var storage = localStorage.getItem('username');
+
   messageButton.addEventListener('click', function (event) {
     showModal(event, messageModal);
     if (storage) {
@@ -45,9 +46,7 @@ if ((messageButton) && (messageModal)) {
       username.focus();
     }
   });
-}
 
-if ((messageModal) && (messageForm)) {
   messageForm.addEventListener('submit', function (event) {
     if ((!username.value) || (!email.value)) {
       event.preventDefault();
