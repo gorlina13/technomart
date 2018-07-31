@@ -4,10 +4,13 @@ var mapLink = document.querySelector('.contacts__map');
 var mapModal = document.querySelector('.modal--map');
 var messageButton = document.querySelector('.contacts__button');
 var messageModal = document.querySelector('.modal--message');
-var toCartButtons = document.querySelectorAll('.button--buy');
+var cartPlusButtons = document.querySelectorAll('.button--buy');
 var cartPlusModal = document.querySelector('.modal--cart-plus');
 var modals = document.querySelectorAll('.modal');
 var overlay = document.querySelector('.overlay');
+var isStorageSupport = true;
+var storage = '';
+var products = document.querySelectorAll('.product');
 
 function showModal(event, modal) {
   event.preventDefault();
@@ -17,8 +20,10 @@ function showModal(event, modal) {
   modal.classList.add('modal--show');
 }
 
-function hideModal(modal) {
+function hideModal(event, modal) {
+  event.preventDefault();
   modal.classList.remove('modal--show');
+  modal.classList.remove('modal--without-animation');
   modal.classList.remove('modal--error');
   if (overlay) {
     overlay.classList.remove('overlay--show');
@@ -35,7 +40,12 @@ if ((messageButton) && (messageModal)) {
   var messageForm = messageModal.querySelector('.message-form');
   var username = messageModal.querySelector('[name=username]');
   var email = messageModal.querySelector('[name=email]');
-  var storage = localStorage.getItem('username');
+
+  try {
+    storage = localStorage.getItem('username');
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
   messageButton.addEventListener('click', function (event) {
     showModal(event, messageModal);
@@ -50,15 +60,29 @@ if ((messageButton) && (messageModal)) {
   messageForm.addEventListener('submit', function (event) {
     if ((!username.value) || (!email.value)) {
       event.preventDefault();
-      messageModal.classList.add('modal--error');
+      messageModal.classList.remove('modal--error');
+      messageModal.classList.add('modal--without-animation');
+      messageModal.classList.remove('modal--show');
+
+      setTimeout(function () {
+        messageModal.classList.add('modal--error');
+      }, 200);
+
+      if ((username.value) && (!email.value)) {
+        email.focus();
+      } else {
+        username.focus();
+      }
     } else {
-      localStorage.setItem('username', username.value);
+      if (isStorageSupport) {
+        localStorage.setItem('username', username.value);
+      }
     }
   });
 }
 
-if ((toCartButtons) && (cartPlusModal)) {
-  [].forEach.call(toCartButtons, function (item) {
+if ((cartPlusButtons) && (cartPlusModal)) {
+  [].forEach.call(cartPlusButtons, function (item) {
     item.addEventListener('click', function (event) {
       showModal(event, cartPlusModal);
     });
@@ -69,21 +93,34 @@ if (modals) {
   [].forEach.call(modals, function (item) {
     var close = item.querySelector('.modal__close');
     close.addEventListener('click', function (event) {
-      event.preventDefault();
-      hideModal(item);
+      hideModal(event, item);
     });
     window.addEventListener('keydown', function (event) {
       if (event.keyCode === 27) {
-        if (item.classList.contains('modal--show')) {
-          hideModal(item);
+        if ((item.classList.contains('modal--show')) || (item.classList.contains('modal--without-animation'))) {
+          hideModal(event, item);
         }
       }
     });
     if (overlay) {
-      overlay.addEventListener('click', function () {
-        hideModal(item);
+      overlay.addEventListener('click', function (event) {
+        hideModal(event, item);
       });
     }
+  });
+}
+
+if (products) {
+  [].forEach.call(products, function (item) {
+    var buttons = item.querySelectorAll('.product__button');
+    [].forEach.call(buttons, function (button) {
+      button.addEventListener('focus', function () {
+        item.classList.remove('product--no-js');
+      });
+      button.addEventListener('blur', function () {
+        item.classList.add('product--no-js');
+      });
+    });
   });
 }
 
