@@ -9,7 +9,7 @@ function initMap() {
     lng: 30.322993
   };
 
-  var BIG_MAP_CENTER = {
+  var BIG_MAP_CENTER_LAT_LNG = {
     lat: 59.9395147,
     lng: 30.3151553
   };
@@ -22,7 +22,7 @@ function initMap() {
 
   var BIG_MAP_OPTIONS = {
     zoom: ZOOM,
-    center: BIG_MAP_CENTER,
+    center: BIG_MAP_CENTER_LAT_LNG,
     scrollwheel: false
   };
 

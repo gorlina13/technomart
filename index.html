@@ -34,7 +34,7 @@
             <label class="visually-hidden" for="search-field">Поиск:</label>
             <button class="search__submit" type="submit">
               <span class="visually-hidden">Найти</span>
-              <svg class="search__icon" width="17" height="17" aria-hidden="true" role="presentation">
+              <svg class="search__icon" width="17" height="17" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="#icon-search"></use>
               </svg>
             </button>
@@ -54,7 +54,7 @@
           <li class="user-list__item user-list__item--login">
             <a class="user-list__link user-list__link--login" href="#">
               <span class="user-list__text">Войти</span>
-              <svg class="user-list__icon user-list__icon--login" width="20" height="17" aria-hidden="true" role="presentation">
+              <svg class="user-list__icon user-list__icon--login" width="20" height="17" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="#icon-login"></use>
               </svg>
             </a>
@@ -119,7 +119,7 @@
               <a class="offers__button button button--offers" href="#">для стройки</a>
             </li>
           </ul>
-          <article class="favorites slider slider--favorites">
+          <article class="favorites slider slider--favorites" role="article">
             <h3 class="visually-hidden">Любимые инструменты</h3>
             <ul class="slider__controls slider__controls--favorites">
               <li>
@@ -138,7 +138,7 @@
                 <section class="favorites__item favorites__item--perforators slider__item">
                   <h4 class="favorites__title">Перфораторы</h4>
                   <p class="favorites__slogan">Настоящие мужские игрушки</p>
-                  <a class="favorites__button button button--favorites" href="catalog.html">Открыть каталог</a>
+                  <a class="favorites__button button button--favorites" href="catalog.html" tabindex="-1">Открыть каталог</a>
                 </section>
                 <section class="favorites__item favorites__item--drills slider__item slider__item--show">
                   <h4 class="favorites__title">Дрели</h4>
@@ -177,9 +177,9 @@
             <h2 class="popular__title">Популярные товары:</h2>
             <a class="popular__button button button--popular" href="#">Все популярные товары</a>
           </header>
-          <ul class="popular__list">
+          <ul class="popular__list popular__list--products">
             <li class="popular__item popular__item--product">
-              <article class="product product--no-js">
+              <article class="product product--no-focus" role="article">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;9000</h3>
                 <p class="product__sticker">
                   <span class="visually-hidden"></span>
@@ -196,7 +196,7 @@
               </article>
             </li>
             <li class="popular__item popular__item--product">
-              <article class="product product--no-js">
+              <article class="product product--no-focus" role="article">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
                 <p class="product__sticker">
                   <span class="visually-hidden"></span>
@@ -213,7 +213,7 @@
               </article>
             </li>
             <li class="popular__item popular__item--product">
-              <article class="product product--no-js">
+              <article class="product product--no-focus" role="article">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
                 <p class="product__sticker">
                   <span class="visually-hidden"></span>
@@ -230,7 +230,7 @@
               </article>
             </li>
             <li class="popular__item popular__item--product">
-              <article class="product product--no-js">
+              <article class="product product--no-focus" role="article">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
                 <p class="product__sticker product__sticker--new">
                   <span class="visually-hidden">Новинка</span>
@@ -254,7 +254,7 @@
             <h2 class="popular__title">Популярные производители:</h2>
             <a class="popular__button button button--popular" href="#">Все производители</a>
           </header>
-          <ul class="popular__list">
+          <ul class="popular__list popular__list--brands">
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
                <img class="popular__logo-image popular__logo-image--bosch" src="img/logo-bosch.png" width="126" height="37" alt="Логотип компании Robert Bosch GmbH: переход к товарам">
@@ -329,7 +329,7 @@
                 <section class="services__panel services__panel--credit slider__item">
                   <h3 class="services__subtitle">Кредит</h3>
                   <p class="services__info">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
-                  <a class="services__button button button--credit" href="#">Отправить заявку</a>
+                  <a class="services__button button button--credit" href="#" tabindex="-1">Отправить заявку</a>
                 </section>
               </div>
             </div>
@@ -353,7 +353,7 @@
         <section class="contacts" id="contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__info">Вы можете забрать товар сами,<br>заехав в наш офис:</p>
-          <a class="contacts__map map" href="https://tinyurl.com/technomartAddress">
+          <a class="contacts__map-link map" href="https://tinyurl.com/technomartAddress">
             <p class="map__illustration map__illustration--preview">
               <img class="map__image map__image--preview" src="img/map-preview.jpg" width="300" height="158" alt="Наш офис на карте: Большая Конюшенная ул., 19">
             </p>
@@ -436,8 +436,8 @@
       </div>
     </footer>
 
-    <section class="modal modal--map map">
-      <h2 class="visually-hidden">Карта проезда к офису: Санкт-Петербург, ул. Большая Конюшенная, д. 19</h2>
+    <section class="modal modal--map map" role="dialog" aria-labelledby="map-title">
+      <h2 class="visually-hidden" id="map-title">Карта проезда к офису: Санкт-Петербург, ул. Большая Конюшенная, д. 19</h2>
       <p class="map__illustration map__illustration--big">
         <img class="map__image map__image--big" src="img/map-big.jpg" width="940" height="446" alt="Большая Конюшенная ул., 19">
       </p>
@@ -447,13 +447,13 @@
       </button>
     </section>
 
-    <section class="modal modal--message">
-      <form class="modal__form message-form" action="#" method="post" aria-labelledby="message-form-heading">
-        <h2 class="visually-hidden" id="message-form-heading">Ваше письмо</h2>
+    <section class="modal modal--message" role="dialog">
+      <form class="modal__form message-form" action="#" method="post" aria-labelledby="message-form-title">
+        <h2 class="visually-hidden" id="message-form-title">Ваше письмо</h2>
         <ul class="message-form__list">
           <li class="message-form__item">
-            <input class="message-form__input" type="text" name="username" id="username-field" placeholder="Представьтесь, пожалуйста">
-            <label class="message-form__label" for="username-field">Ваше имя:</label>
+            <input class="message-form__input" type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста">
+            <label class="message-form__label" for="name-field">Ваше имя:</label>
           </li>
           <li class="message-form__item">
             <input class="message-form__input" type="email" name="email" id="email-field" placeholder="Для отправки ответа">
@@ -471,8 +471,8 @@
       </button>
     </section>
 
-    <section class="modal modal--cart-plus">
-      <h2 class="modal__title">Товар добавлен в корзину!</h2>
+    <section class="modal modal--cart-plus" role="dialog" aria-labelledby="cart-plus-title">
+      <h2 class="modal__title" id="cart-plus-title">Товар добавлен в корзину!</h2>
       <p class="modal__buttons">
         <a class="modal__button button button--checkout" href="#">Оформить заказ</a>
         <a class="modal__button button button--continue" href="#">Продолжить покупки</a>
@@ -484,8 +484,6 @@
     <div class="overlay"></div>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPChudeBDq6E5cWVAiQcCxzzbQm4o-93c&callback=initMap"></script>
-    <script src="js/map.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

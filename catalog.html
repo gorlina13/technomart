@@ -34,7 +34,7 @@
             <label class="visually-hidden" for="search-field">Поиск:</label>
             <button class="search__submit" type="submit">
               <span class="visually-hidden">Найти</span>
-              <svg class="search__icon" width="17" height="17" aria-hidden="true" role="presentation">
+              <svg class="search__icon" width="17" height="17" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="#icon-search"></use>
               </svg>
             </button>
@@ -54,7 +54,7 @@
           <li class="user-list__item user-list__item--username">
             <a class="user-list__link user-list__link--username" href="#" aria-label="Равшан Джамшутович">
               <span class="user-list__text">Равшан Джамшутович</span>
-              <svg class="user-list__icon user-list__icon--username" width="20" height="18" role="img">
+              <svg class="user-list__icon user-list__icon--username" width="20" height="18" role="img" focusable="false">
                 <use xlink:href="#icon-username"></use>
               </svg>
             </a>
@@ -70,7 +70,7 @@
           <li class="user-list__item user-list__item--logout">
             <a class="user-list__link user-list__link--logout" href="#">
               <span class="visually-hidden">Выйти</span>
-              <svg class="user-list__icon user-list__icon--logout" width="21" height="17" aria-hidden="true" role="presentation">
+              <svg class="user-list__icon user-list__icon--logout" width="21" height="17" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="#icon-logout"></use>
               </svg>
             </a>
@@ -130,8 +130,8 @@
                 <div class="range__scale">
                   <div class="range__bar" style="width: 88.9%;"></div>
                 </div>
-                <div class="range__toggle range__toggle--min"></div>
-                <div class="range__toggle range__toggle--max"></div>
+                <div class="range__toggle range__toggle--min" tabindex="0" role="button"></div>
+                <div class="range__toggle range__toggle--max" tabindex="0" role="button"></div>
               </div>
               <p class="range__fields">
                 <label class="range__label">
@@ -152,7 +152,7 @@
                   <input class="filter-form__checkbox visually-hidden" type="checkbox" name="bosch" id="bosch-field" value="bosch" checked>
                   <label class="filter-form__checkbox-label" for="bosch-field">
                     <span>Bosch</span>
-                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation">
+                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation" focusable="false">
                       <use xlink:href="#checkbox-on"></use>
                     </svg>
                   </label>
@@ -161,7 +161,7 @@
                   <input class="filter-form__checkbox visually-hidden" type="checkbox" name="interskol" id="interskol-field" value="interskol">
                   <label class="filter-form__checkbox-label" for="interskol-field">
                     <span>Интерскол</span>
-                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation">
+                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation" focusable="false">
                       <use xlink:href="#checkbox-on"></use>
                     </svg>
                   </label>
@@ -170,7 +170,7 @@
                   <input class="filter-form__checkbox visually-hidden" type="checkbox" name="makita" id="makita-field" value="makita" checked>
                   <label class="filter-form__checkbox-label" for="makita-field">
                     <span>Makita</span>
-                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation">
+                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation" focusable="false">
                       <use xlink:href="#checkbox-on"></use>
                     </svg>
                   </label>
@@ -179,7 +179,7 @@
                   <input class="filter-form__checkbox visually-hidden" type="checkbox" name="dewalt" id="dewalt-field" value="dewalt">
                   <label class="filter-form__checkbox-label" for="dewalt-field">
                     <span>DeWALT</span>
-                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation">
+                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation" focusable="false">
                       <use xlink:href="#checkbox-on"></use>
                     </svg>
                   </label>
@@ -188,7 +188,7 @@
                   <input class="filter-form__checkbox visually-hidden" type="checkbox" name="hitachi" id="hitachi-field" value="hitachi">
                   <label class="filter-form__checkbox-label" for="hitachi-field">
                     <span>Hitachi</span>
-                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation">
+                    <svg class="filter-form__checkbox-on" width="27" height="23" aria-hidden="true" role="presentation" focusable="false">
                       <use xlink:href="#checkbox-on"></use>
                     </svg>
                   </label>
@@ -242,7 +242,7 @@
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="catalog__list">
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
                   <p class="product__sticker">
                     <span class="visually-hidden"></span>
@@ -259,7 +259,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
                   <p class="product__sticker">
                     <span class="visually-hidden"></span>
@@ -276,7 +276,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
                   <p class="product__sticker product__sticker--new">
                     <span class="visually-hidden">Новинка</span>
@@ -293,7 +293,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
                   <p class="product__sticker">
                     <span class="visually-hidden"></span>
@@ -310,7 +310,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
                   <p class="product__sticker product__sticker--new">
                     <span class="visually-hidden">Новинка</span>
@@ -327,7 +327,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
                   <p class="product__sticker">
                     <span class="visually-hidden"></span>
@@ -344,7 +344,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
                   <p class="product__sticker product__sticker--new">
                     <span class="visually-hidden">Новинка</span>
@@ -361,7 +361,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
                   <p class="product__sticker">
                     <span class="visually-hidden"></span>
@@ -378,7 +378,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-js">
+                <article class="product product--no-focus" role="article">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
                   <p class="product__sticker">
                     <span class="visually-hidden"></span>
@@ -493,8 +493,8 @@
       </div>
     </footer>
 
-    <section class="modal modal--cart-plus">
-      <h2 class="modal__title">Товар добавлен в корзину!</h2>
+    <section class="modal modal--cart-plus" role="dialog" aria-labelledby="cart-plus-title">
+      <h2 class="modal__title" id="cart-plus-title">Товар добавлен в корзину!</h2>
       <p class="modal__buttons">
         <a class="modal__button button button--checkout" href="#">Оформить заказ</a>
         <a class="modal__button button button--continue" href="#">Продолжить покупки</a>
@@ -505,7 +505,6 @@
     </section>
     <div class="overlay"></div>
 
-    <script src="js/modal.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
