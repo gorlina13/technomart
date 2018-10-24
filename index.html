@@ -2,10 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no">
     <title>Техномарт — Главная</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <svg style="display: none;">
@@ -47,12 +46,12 @@
       <div class="page-header__wrapper wrapper">
         <p class="page-header__description">Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов&nbsp;для&nbsp;ремонта</p>
         <p class="page-header__contacts">
-          <b class="page-header__phone">+7&nbsp;(812)&nbsp;555-05-55</b>
+          <a class="page-header__phone" href="tel:+78125550555">+7&nbsp;(812)&nbsp;555-05-55</a>
           <span class="page-header__address">г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8</span>
         </p>
-        <ul class="page-header__user-list user-list user-list--unknown">
+        <ul class="page-header__user-list user-list">
           <li class="user-list__item user-list__item--login">
-            <a class="user-list__link user-list__link--login" href="#">
+            <a class="user-list__link" href="#">
               <span class="user-list__text">Войти</span>
               <svg class="user-list__icon user-list__icon--login" width="20" height="17" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="#icon-login"></use>
@@ -92,34 +91,34 @@
     </header>
 
     <main class="main">
-      <h1 class="visually-hidden">Магазин «Техномарт»</h1>
+      <h1 class="visually-hidden">Магазин &laquo;Техномарт&raquo;</h1>
       <div class="main__wrapper wrapper">
         <section class="offers">
           <h2 class="visually-hidden">Наши предложения</h2>
           <ul class="offers__list offers__list--goods">
             <li class="offers__item offers__item--materials">
+              <h3 class="offers__title">Материалы</h3>
+              <a class="offers__button button button--offers" href="#">на любой вкус</a>
               <p class="offers__sticker offers__sticker--new">
                 <span class="visually-hidden">New</span>
               </p>
-              <h3 class="offers__title">Материалы</h3>
-              <a class="offers__button button button--offers" href="#">на любой вкус</a>
             </li>
-            <li class="offers__item offers__item--tool">
-              <p class="offers__sticker">
-                <span class="visually-hidden"></span>
-              </p>
+            <li class="offers__item offers__item--tools">
               <h3 class="offers__title">Инструмент</h3>
               <a class="offers__button button button--offers" href="#">на все случаи</a>
-            </li>
-            <li class="offers__item offers__item--equipment">
               <p class="offers__sticker">
                 <span class="visually-hidden"></span>
               </p>
+            </li>
+            <li class="offers__item offers__item--equipment">
               <h3 class="offers__title">Техника</h3>
               <a class="offers__button button button--offers" href="#">для стройки</a>
+              <p class="offers__sticker">
+                <span class="visually-hidden"></span>
+              </p>
             </li>
           </ul>
-          <article class="favorites slider slider--favorites" role="article">
+          <article class="favorites slider slider--favorites">
             <h3 class="visually-hidden">Любимые инструменты</h3>
             <ul class="slider__controls slider__controls--favorites">
               <li>
@@ -156,18 +155,18 @@
           </article>
           <ul class="offers__list offers__list--conditions">
             <li class="offers__item offers__item--discounts">
-              <p class="offers__sticker">
-                <span class="visually-hidden"></span>
-              </p>
               <h3 class="offers__title">Скидки 50%</h3>
               <a class="offers__button button button--offers" href="#">на 350 товаров</a>
-            </li>
-            <li class="offers__item offers__item--delivery">
               <p class="offers__sticker">
                 <span class="visually-hidden"></span>
               </p>
+            </li>
+            <li class="offers__item offers__item--delivery">
               <h3 class="offers__title">Доставка</h3>
               <a class="offers__button button button--offers" href="#">бесплатно</a>
+              <p class="offers__sticker">
+                <span class="visually-hidden"></span>
+              </p>
             </li>
           </ul>
         </section>
@@ -179,13 +178,13 @@
           </header>
           <ul class="popular__list popular__list--products">
             <li class="popular__item popular__item--product">
-              <article class="product product--no-focus" role="article">
+              <article class="product product--no-focus">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;9000</h3>
-                <p class="product__sticker">
-                  <span class="visually-hidden"></span>
+                <p class="product__sticker product__sticker--new">
+                  <span class="visually-hidden">Новинка</span>
                 </p>
                 <p class="product__illustration">
-                 <img class="product__image" src="img/bosch-9000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 9000">
+                  <img class="product__image" src="img/bosch-9000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 9000">
                 </p>
                 <p class="product__prev-price">32500 р.</p>
                 <p class="product__price">25500 р.</p>
@@ -196,13 +195,13 @@
               </article>
             </li>
             <li class="popular__item popular__item--product">
-              <article class="product product--no-focus" role="article">
+              <article class="product product--no-focus">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
-                <p class="product__sticker">
-                  <span class="visually-hidden"></span>
+                <p class="product__sticker product__sticker--new">
+                  <span class="visually-hidden">Новинка</span>
                 </p>
                 <p class="product__illustration">
-                 <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
+                  <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
                 </p>
                 <p class="product__prev-price">22500 р.</p>
                 <p class="product__price">15500 р.</p>
@@ -213,13 +212,13 @@
               </article>
             </li>
             <li class="popular__item popular__item--product">
-              <article class="product product--no-focus" role="article">
+              <article class="product product--no-focus">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
-                <p class="product__sticker">
-                  <span class="visually-hidden"></span>
+                <p class="product__sticker product__sticker--new">
+                  <span class="visually-hidden">Новинка</span>
                 </p>
                 <p class="product__illustration">
-                 <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
+                  <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
                 </p>
                 <p class="product__prev-price">30500 р.</p>
                 <p class="product__price">25500 р.</p>
@@ -230,13 +229,13 @@
               </article>
             </li>
             <li class="popular__item popular__item--product">
-              <article class="product product--no-focus" role="article">
+              <article class="product product--new product--no-focus">
                 <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
                 <p class="product__sticker product__sticker--new">
                   <span class="visually-hidden">Новинка</span>
                 </p>
                 <p class="product__illustration">
-                 <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
+                  <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
                 </p>
                 <p class="product__prev-price"></p>
                 <p class="product__price">12500 р.</p>
@@ -257,42 +256,42 @@
           <ul class="popular__list popular__list--brands">
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--bosch" src="img/logo-bosch.png" width="126" height="37" alt="Логотип компании Robert Bosch GmbH: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--bosch" src="img/logo-bosch.png" width="126" height="37" alt="Логотип компании Robert Bosch GmbH: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--makita" src="img/logo-makita.png" width="123" height="40" alt="Логотип компании Makita Corporation: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--makita" src="img/logo-makita.png" width="123" height="40" alt="Логотип компании Makita Corporation: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--dewalt" src="img/logo-dewalt.png" width="146" height="44" alt="Логотип компании DeWALT: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--dewalt" src="img/logo-dewalt.png" width="146" height="44" alt="Логотип компании DeWALT: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--interskol" src="img/logo-interskol.png" width="184" height="32" alt="Логотип компании «Интерскол»: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--interskol" src="img/logo-interskol.png" width="184" height="32" alt="Логотип компании «Интерскол»: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--hitachi" src="img/logo-hitachi.png" width="169" height="31" alt="Логотип компании Hitachi: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--hitachi" src="img/logo-hitachi.png" width="169" height="31" alt="Логотип компании Hitachi: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--lg" src="img/logo-lg.png" width="121" height="73" alt="Логотип компании LG Electronics: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--lg" src="img/logo-lg.png" width="121" height="73" alt="Логотип компании LG Electronics: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--aeg" src="img/logo-aeg.png" width="151" height="96" alt="Логотип компании AEG: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--aeg" src="img/logo-aeg.png" width="151" height="96" alt="Логотип компании AEG: переход к товарам">
               </a>
             </li>
             <li class="popular__item popular__item--brand">
               <a class="popular__logo" href="#">
-               <img class="popular__logo-image popular__logo-image--metabo" src="img/logo-metabo.png" width="204" height="69" alt="Логотип компании Metabowerke GmbH: переход к товарам">
+                <img class="popular__logo-image popular__logo-image--metabo" src="img/logo-metabo.png" width="204" height="69" alt="Логотип компании Metabowerke GmbH: переход к товарам">
               </a>
             </li>
           </ul>
@@ -340,7 +339,7 @@
       <div class="main__wrapper main__wrapper--flex wrapper">
         <section class="company" id="company">
           <h2 class="company__title">Компания &laquo;Техномарт&raquo;</h2>
-          <p class="company__info">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p class="company__info">Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p class="company__info">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
           <ul class="company__list">
             <li class="company__item">Деловые линии</li>
@@ -355,9 +354,9 @@
           <p class="contacts__info">Вы можете забрать товар сами,<br>заехав в наш офис:</p>
           <a class="contacts__map-link map" href="https://tinyurl.com/technomartAddress">
             <p class="map__illustration map__illustration--preview">
-              <img class="map__image map__image--preview" src="img/map-preview.jpg" width="300" height="158" alt="Наш офис на карте: Большая Конюшенная ул., 19">
+              <img class="map__image map__image--preview" src="img/map-preview.jpg" width="300" height="158" alt="Наш офис на карте: Санкт-Петербург, Большая Конюшенная ул., 19">
             </p>
-            <p class="map__interactive-area map__interactive-area--preview"></p>
+            <p class="map__interactive-area map__interactive-area--preview" aria-label="Наш офис на карте Google"></p>
           </a>
           <a class="contacts__button button button--contacts" href="#">Заблудились? Напишите нам</a>
         </section>
@@ -385,8 +384,8 @@
           </li>
         </ul>
         <p class="page-footer__contacts">
-          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8<br>
-          +7&nbsp;(812)&nbsp;555-05-55
+          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8
+          <a class="page-footer__phone" href="tel:+78125550555">+7&nbsp;(812)&nbsp;555-05-55</a>
         </p>
         <ul class="page-footer__list page-footer__list--categories">
           <li class="page-footer__item">
@@ -405,7 +404,7 @@
       </div>
       <div class="page-footer__bottom">
         <p class="page-footer__copyright copyright copyright--technomart">
-          © 2010–2017 Компания «Техномарт»<br>
+          © 2010–2017 Компания &laquo;Техномарт&raquo;<br>
           Все права защищены
         </p>
         <ul class="page-footer__social social">
@@ -437,11 +436,11 @@
     </footer>
 
     <section class="modal modal--map map" role="dialog" aria-labelledby="map-title">
-      <h2 class="visually-hidden" id="map-title">Карта проезда к офису: Санкт-Петербург, ул. Большая Конюшенная, д. 19</h2>
+      <h2 class="visually-hidden" id="map-title">Карта проезда к офису</h2>
       <p class="map__illustration map__illustration--big">
-        <img class="map__image map__image--big" src="img/map-big.jpg" width="940" height="446" alt="Большая Конюшенная ул., 19">
+        <img class="map__image map__image--big" src="img/map-big.jpg" width="940" height="446" alt="Санкт-Петербург, Большая Конюшенная ул., 19">
       </p>
-      <p class="map__interactive-area map__interactive-area--big"></p>
+      <p class="map__interactive-area map__interactive-area--big" aria-label="Наш офис на карте Google"></p>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть окно</span>
       </button>

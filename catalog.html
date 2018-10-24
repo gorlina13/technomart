@@ -2,10 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no">
     <title>Техномарт — Каталог</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <svg style="display: none;">
@@ -47,12 +46,12 @@
       <div class="page-header__wrapper wrapper">
         <p class="page-header__description">Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов&nbsp;для&nbsp;ремонта</p>
         <p class="page-header__contacts">
-          <b class="page-header__phone">+7&nbsp;(812)&nbsp;555-05-55</b>
+          <a class="page-header__phone" href="tel:+78125550555">+7&nbsp;(812)&nbsp;555-05-55</a>
           <span class="page-header__address">г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8</span>
         </p>
-        <ul class="page-header__user-list user-list user-list--known">
+        <ul class="page-header__user-list user-list">
           <li class="user-list__item user-list__item--username">
-            <a class="user-list__link user-list__link--username" href="#" aria-label="Равшан Джамшутович">
+            <a class="user-list__link" href="#" aria-label="Равшан Джамшутович">
               <span class="user-list__text">Равшан Джамшутович</span>
               <svg class="user-list__icon user-list__icon--username" width="20" height="18" role="img" focusable="false">
                 <use xlink:href="#icon-username"></use>
@@ -68,7 +67,7 @@
             </ul>
           </li>
           <li class="user-list__item user-list__item--logout">
-            <a class="user-list__link user-list__link--logout" href="#">
+            <a class="user-list__link" href="#">
               <span class="visually-hidden">Выйти</span>
               <svg class="user-list__icon user-list__icon--logout" width="21" height="17" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="#icon-logout"></use>
@@ -138,7 +137,7 @@
                   <span class="visually-hidden">Минимальная цена</span>
                   <input class="range__input" type="text" name="min-price" id="min-price-field" value="0">
                 </label>
-                <span>&ndash;</span>
+                <span class="range__dash">&ndash;</span>
                 <label class="range__label">
                   <span class="visually-hidden">Максимальная цена</span>
                   <input class="range__input" type="text" name="max-price" id="max-price-field" value="30000">
@@ -242,13 +241,13 @@
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="catalog__list">
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
-                  <p class="product__sticker">
-                    <span class="visually-hidden"></span>
+                  <p class="product__sticker product__sticker--new">
+                    <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
+                    <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
                   </p>
                   <p class="product__prev-price">22500 р.</p>
                   <p class="product__price">15500 р.</p>
@@ -259,13 +258,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
-                  <p class="product__sticker">
-                    <span class="visually-hidden"></span>
+                  <p class="product__sticker product__sticker--new">
+                    <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
+                    <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
                   </p>
                   <p class="product__prev-price">30500 р.</p>
                   <p class="product__price">25500 р.</p>
@@ -276,13 +275,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--new product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
                   <p class="product__sticker product__sticker--new">
                     <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
+                    <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
                   </p>
                   <p class="product__prev-price"></p>
                   <p class="product__price">12500 р.</p>
@@ -293,13 +292,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
-                  <p class="product__sticker">
-                    <span class="visually-hidden"></span>
+                  <p class="product__sticker product__sticker--new">
+                    <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
+                    <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
                   </p>
                   <p class="product__prev-price">22500 р.</p>
                   <p class="product__price">15500 р.</p>
@@ -310,13 +309,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--new product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
                   <p class="product__sticker product__sticker--new">
                     <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
+                    <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
                   </p>
                   <p class="product__prev-price">30500 р.</p>
                   <p class="product__price">25500 р.</p>
@@ -327,13 +326,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
-                  <p class="product__sticker">
-                    <span class="visually-hidden"></span>
+                  <p class="product__sticker product__sticker--new">
+                    <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
+                    <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
                   </p>
                   <p class="product__prev-price"></p>
                   <p class="product__price">12500 р.</p>
@@ -344,13 +343,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--new product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;3000</h3>
                   <p class="product__sticker product__sticker--new">
                     <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
+                    <img class="product__image" src="img/bosch-3000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 3000">
                   </p>
                   <p class="product__prev-price">22500 р.</p>
                   <p class="product__price">15500 р.</p>
@@ -361,13 +360,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;6000</h3>
-                  <p class="product__sticker">
-                    <span class="visually-hidden"></span>
+                  <p class="product__sticker product__sticker--new">
+                    <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
+                    <img class="product__image" src="img/bosch-6000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 6000">
                   </p>
                   <p class="product__prev-price">30500 р.</p>
                   <p class="product__price">25500 р.</p>
@@ -378,13 +377,13 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="product product--no-focus" role="article">
+                <article class="product product--no-focus">
                   <h3 class="product__title">Перфоратор&nbsp;BOSCH BFG&nbsp;2000</h3>
-                  <p class="product__sticker">
-                    <span class="visually-hidden"></span>
+                  <p class="product__sticker product__sticker--new">
+                    <span class="visually-hidden">Новинка</span>
                   </p>
                   <p class="product__illustration">
-                   <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
+                    <img class="product__image" src="img/bosch-2000.jpg" width="216" height="154" alt="Перфоратор BOSCH BFG 2000">
                   </p>
                   <p class="product__prev-price"></p>
                   <p class="product__price">12500 р.</p>
@@ -396,17 +395,17 @@
               </li>
             </ul>
             <ul class="catalog__pagination pagination">
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--current">1</a>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link">1</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="#2">2</a>
+                <a class="pagination__link" href="#">2</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="#3">3</a>
+                <a class="pagination__link" href="#">3</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link pagination__link--next" href="#next">Следующая</a>
+                <a class="pagination__link pagination__link--next" href="#">Следующая</a>
               </li>
             </ul>
           </section>
@@ -442,8 +441,8 @@
           </li>
         </ul>
         <p class="page-footer__contacts">
-          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8<br>
-          +7&nbsp;(812)&nbsp;555-05-55
+          г.&nbsp;Санкт-Петербург,&nbsp;ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8
+          <a class="page-footer__phone" href="tel:+78125550555">+7&nbsp;(812)&nbsp;555-05-55</a>
         </p>
         <ul class="page-footer__list page-footer__list--categories">
           <li class="page-footer__item">
@@ -462,7 +461,7 @@
       </div>
       <div class="page-footer__bottom">
         <p class="page-footer__copyright copyright copyright--technomart">
-          © 2010–2017 Компания «Техномарт»<br>
+          © 2010–2017 Компания &laquo;Техномарт&raquo;<br>
           Все права защищены
         </p>
         <ul class="page-footer__social social">
