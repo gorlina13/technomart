@@ -2921,6 +2921,9 @@ label.visually-hidden {
   text-transform: uppercase;
 
   color: #000000;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
 }
 
 .filter-form__fieldset--supply .filter-form__legend {
